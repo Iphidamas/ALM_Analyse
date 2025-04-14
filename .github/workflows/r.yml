@@ -1,3 +1,67 @@
-pnorm(0.5)
+rm(list=ls())
+
+
+############Données################
+
+#Assets
+
+Coupon = matrix(nrow= 4, ncol=5)
+Coupon[1,]= c("Coupon", "Maturité", "Coupon rate", "credit spread", "Nominal")
+Coupon[2,]= c(1, 4, 0.02, 0.005, 400000000)
+Coupon[3,]= c(2, 7, 0.045, 0.0225, 700000000)
+Coupon[4,]= c(3, 10, 0.035, 0.0125, 900000000)
+
+#Insurance Portfolio - Pure Endowment
+
+
+Portfolio = matrix(nrow= 11, ncol= 6)
+Portfolio[1,]= c("", "Nb_Pol", "Age", "g", "Cl", "^g^")
+Portfolio[2,]= c(1, 950, 64, 0.0325, 250000, 1)
+Portfolio[3,]= c(2, 1200, 62, 0.0325, 280000, 3)
+Portfolio[4,]= c(3, 1090, 60, 0.03, 200000, 5)
+Portfolio[5,]= c(4, 900, 58, 0.025, 180000, 7)
+Portfolio[6,]= c(5, 1050, 56, 0.0225, 225000, 9)
+Portfolio[7,]= c(6, 950, 54, 0.02, 275000, 11)
+Portfolio[8,]= c(7, 1250, 52, 0.02, 175000, 13)
+Portfolio[9,]= c(8, 1300, 50, 0.0175, 180000, 15)
+Portfolio[10,]= c(9, 1350, 48, 0.175, 200000, 17)
+Portfolio[11,]= c(10, 1450, 46, 0.015, 250000, 19)
+
+
+#Interest Rates
+
+Swap = matrix(nrow= 20, ncol= 2)
+Swap[1,] = c("Maturité", "Taux Swap")
+Swap[2,] = c(2, 0.02251)
+Swap[3,] = c(3, 0.02500)
+Swap[4,] = c(4, 0.02695)
+Swap[5,] = c(5, 0.02848)
+Swap[6,] = c(6, 0.02969)
+Swap[7,] = c(7, 0.03067)
+Swap[8,] = c(8, 0.03146)
+Swap[9,] = c(9, 0.03210)
+Swap[10,] = c(10, 0.03264)
+Swap[11,] = c(11, 0.03308)
+Swap[12,] = c(12, 0.03346)
+Swap[13,] = c(13, 0.03378)
+Swap[14,] = c(14, 0.03406)
+Swap[15,] = c(15, 0.03429)
+Swap[16,] = c(16, 0.03450)
+Swap[17,] = c(17, 0.03468)
+Swap[18,] = c(18, 0.03485)
+Swap[19,] = c(19, 0.03499)
+Swap[20,] = c(20, 0.03512)
+
+
+Esther = 0.015
+Depo_Rate_3m = 0.01616
+Depo_Rate_6m = 0.01726
+FRA_Rate_6X12 = 0.02114
+
+
+
+####Deterministic Model#######
+
+
 
 
