@@ -10,6 +10,22 @@ Coupon[1,]= c("Coupon", "Maturité", "Coupon rate", "credit spread", "Nominal")
 Coupon[2,]= c(1, 4, 0.02, 0.005, 400000000)
 Coupon[3,]= c(2, 7, 0.045, 0.0225, 700000000)
 Coupon[4,]= c(3, 10, 0.035, 0.0125, 900000000)
+Coupon_df <- as.data.frame(Coupon[-1, ], stringsAsFactors = FALSE)
+colnames(Coupon_df) <- Coupon[1, ]
+Coupon_df$Coupon <- as.integer(Coupon_df$Coupon)
+Coupon_df$Maturité <- as.integer(Coupon_df$Maturité)
+Coupon_df$`Coupon rate` <- as.numeric(Coupon_df$`Coupon rate`)
+Coupon_df$`credit spread` <- as.numeric(Coupon_df$`credit spread`)
+Coupon_df$Nominal <- as.numeric(Coupon_df$Nominal)
+Coupon = Coupon_df
+
+
+
+
+
+
+
+
 
 #Insurance Portfolio - Pure Endowment
 
@@ -26,6 +42,24 @@ Portfolio[8,]= c(7, 1250, 52, 0.02, 175000, 13)
 Portfolio[9,]= c(8, 1300, 50, 0.0175, 180000, 15)
 Portfolio[10,]= c(9, 1350, 48, 0.175, 200000, 17)
 Portfolio[11,]= c(10, 1450, 46, 0.015, 250000, 19)
+
+
+Portfolio_df <- as.data.frame(Portfolio[-1, ], stringsAsFactors = FALSE)
+colnames(Portfolio_df) <- Portfolio[1, ]
+
+colnames(Portfolio_df)[1] <- "ID"
+
+Portfolio_df$ID <- as.integer(Portfolio_df$ID)
+Portfolio_df$Nb_Pol <- as.integer(Portfolio_df$Nb_Pol)
+Portfolio_df$Age <- as.integer(Portfolio_df$Age)
+Portfolio_df$g <- as.numeric(Portfolio_df$g)
+Portfolio_df$Cl <- as.numeric(Portfolio_df$Cl)
+Portfolio_df$`^g^` <- as.numeric(Portfolio_df$`^g^`)
+
+Portfolio = Portfolio_df
+
+
+
 
 
 #Interest Rates
@@ -53,6 +87,17 @@ Swap[19,] = c(19, 0.03499)
 Swap[20,] = c(20, 0.03512)
 
 
+Swap_df <- as.data.frame(Swap[-1, ], stringsAsFactors = FALSE)
+colnames(Swap_df) <- Swap[1, ]
+
+Swap_df$Maturité <- as.integer(Swap_df$Maturité)
+Swap_df$`Taux Swap` <- as.numeric(Swap_df$`Taux Swap`)
+
+Swap = Swap_df
+
+
+
+
 Esther = 0.015
 Depo_Rate_3m = 0.01616
 Depo_Rate_6m = 0.01726
@@ -61,6 +106,19 @@ FRA_Rate_6X12 = 0.02114
 
 
 ####Deterministic Model#######
+
+#Question 1
+
+#Question 2
+
+
+
+
+
+
+
+
+
 
 
 
